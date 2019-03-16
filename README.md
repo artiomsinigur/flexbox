@@ -1,5 +1,6 @@
 # Visual Flexbox Cheatsheet
 A Quick Visual Guide about using Flexbox Properties
+[Flexbox Cheatsheet](https://artiomsinigur.github.io/flexbox/)
 
 ## Inspiration
  - From the Book CSS3 Flexbox by Raphaël Goetter
