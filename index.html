@@ -1,0 +1,841 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" href="css/style.css">
+	<title>Visual Flexbox Cheatsheet</title>
+</head>
+<body>
+  <button class="side-nav-open" onclick="openNav()">&#9776;</button>
+  <nav id="sideNav" class="side-nav">
+    <div class="wrapper">
+      <h4>Flex container</h4>
+      <button class="side-nav-close" onclick="closeNav()">&#9932;</button>
+      <ul class="lists">
+        <li><a class="list" href="#display">display</a></li>
+        <li><a class="list" href="#flex-direction">flex-direction</a></li>
+        <li><a class="list" href="#flex-wrap">flex-wrap</a></li>
+        <li><a class="list" href="#flex-flow">flex-flow</a></li>
+        <li><a class="list" href="#justify-content">justify-content</a></li>
+        <li><a class="list" href="#align-items">align-items</a></li>
+        <li><a class="list" href="#align-content">align-content</a></li>
+      </ul> 
+      <h4>Flex items</h4>
+      <ul class="lists">
+        <li><a class="list" href="#order">order</a></li>
+        <li><a class="list" href="#align-self">align-self</a></li>
+        <li><a class="list" href="#flex-grow">flex-grow</a></li>
+        <li><a class="list" href="#flex-shrink">flex-shrink</a></li>
+        <li><a class="list" href="#flex-basis">flex-basis</a></li>
+        <li><a class="list" href="#flex">flex</a></li>
+      </ul>
+    </div>
+  </nav>
+
+	<main class="container">
+		<h1>Flex</h1>
+		<h2>Properties for the parent <em>(flex container)</em></h2>
+		<div class="flex-terms">
+			<img src="img/flex-direction-terms.svg" alt="Flex direction terms">
+		</div>
+		
+		<!-- Property display 
+		========================================-->
+		<section id="display" class="proprety">
+			<h3 class="sub-title">display</h3>
+			<div class="row">
+				<aside class="pannel-left">
+					<code class="value"><strong>display: </strong>flex</code>
+				</aside>
+				<div class="content-right">
+					<ul id="display-flex" class="items">
+						<li class="item">Orange</li>
+						<li class="item">Apple</li>
+						<li class="item">Banana</li>
+						<li class="item">Cherry</li>
+						<li class="item">Kiwi</li>
+					</ul>
+				</div>
+			</div>
+			<div class="row">
+				<aside class="pannel-left">
+					<code class="value"><strong>display: </strong>inline-flex</code>
+				</aside>
+				<div class="content-right">
+					<ul id="display-inline-flex" class="items">
+						<li class="item">Orange</li>
+						<li class="item">Apple</li>
+						<li class="item">Banana</li>
+						<li class="item">Cherry</li>
+						<li class="item">Kiwi</li>
+					</ul>
+				</div>
+			</div>
+		</section>
+
+		<!-- Property flex-direction 
+		========================================-->
+		<section id="flex-direction" class="proprety">
+      <h3 class="sub-title">flex-direction</h3>
+<pre>
+  <code><span>display:</span> flex; 
+  <span>flex-direction:</span> value;</code></pre>
+
+			<div class="row">
+				<aside class="pannel-left">
+					<code class="value"><strong>flex-direction: </strong>row <span class="default">default</span></code>
+				</aside>
+				<div class="content-right">
+					<ul id="flex-direction-row" class="items">
+						<li class="item">Orange</li>
+						<li class="item">Apple</li>
+						<li class="item">Banana</li>
+						<li class="item">Cherry</li>
+						<li class="item">Kiwi</li>
+					</ul>
+				</div>
+			</div>
+			<div class="row">
+				<aside class="pannel-left">
+					<code class="value"><strong>flex-direction: </strong>row-reverse</code>
+				</aside>
+				<div class="content-right">
+					<ul id="flex-direction-row-reverse" class="items">
+						<li class="item">Orange</li>
+						<li class="item">Apple</li>
+						<li class="item">Banana</li>
+						<li class="item">Cherry</li>
+						<li class="item">Kiwi</li>
+					</ul>
+				</div>
+			</div>
+			<div class="row">
+				<aside class="pannel-left">
+					<code class="value"><strong>flex-direction: </strong>column</code>
+				</aside>
+				<div class="content-right">
+					<ul id="flex-direction-column" class="items">
+						<li class="item">Orange</li>
+						<li class="item">Apple</li>
+						<li class="item">Banana</li>
+						<li class="item">Cherry</li>
+						<li class="item">Kiwi</li>
+					</ul>
+				</div>
+			</div>
+			<div class="row">
+				<aside class="pannel-left">
+					<code class="value"><strong>flex-direction: </strong>column-reverse</code>
+				</aside>
+				<div class="content-right">
+					<ul id="flex-direction-column-reverse" class="items">
+						<li class="item">Orange</li>
+						<li class="item">Apple</li>
+						<li class="item">Banana</li>
+						<li class="item">Cherry</li>
+						<li class="item">Kiwi</li>
+					</ul>
+				</div>
+			</div>
+		</section>	
+
+		<!-- Property flex-wrap 
+		========================================-->
+		<section id="flex-wrap" class="proprety">
+      <h3 class="sub-title">flex-wrap</h3>
+<pre>
+  <code><span>display:</span> flex;
+  <span>flex-wrap:</span> value;</code></pre>
+
+			<div class="row">
+				<aside class="pannel-left">
+					<code class="value"><strong>flex-wrap: </strong>nowrap <span class="default">default</span></code>
+				</aside>
+				<div class="content-right">
+					<ul id="flex-wrap-nowrap" class="items">
+						<li class="item">Orange</li>
+						<li class="item">Apple</li>
+						<li class="item">Banana</li>
+						<li class="item">Cherry</li>
+						<li class="item">Kiwi</li>
+					</ul>
+				</div>
+			</div>
+			<div class="row">
+				<aside class="pannel-left">
+					<code class="value"><strong>flex-wrap: </strong>wrap</code>
+				</aside>
+				<div class="content-right">
+					<ul id="flex-wrap-wrap" class="items">
+						<li class="item">Orange</li>
+						<li class="item">Apple</li>
+						<li class="item">Banana</li>
+						<li class="item">Cherry</li>
+						<li class="item">Kiwi</li>
+					</ul>
+				</div>
+			</div>
+			<div class="row">
+				<aside class="pannel-left">
+					<code class="value"><strong>flex-wrap: </strong>wrap-reverse</code>
+				</aside>
+				<div class="content-right">
+					<ul id="flex-wrap-wrap-reverse" class="items">
+						<li class="item">Orange</li>
+						<li class="item">Apple</li>
+						<li class="item">Banana</li>
+						<li class="item">Cherry</li>
+						<li class="item">Kiwi</li>
+					</ul>
+				</div>
+			</div>
+		</section>
+
+		<!-- Property flex-flow
+		========================================-->
+		<section id="flex-flow" class="proprety">
+      <h3 class="sub-title">flex-flow shortcut of flex-direction + flex-wrap</h3>
+<pre>
+  <code><span>display:</span> flex;
+  <span>flex-flow:</span> value1 value2;</code></pre>
+
+			<div class="row">
+				<aside class="pannel-left">
+					<code class="value"><strong>flex-flow: </strong>column wrap</code>
+				</aside>
+				<div class="content-right">
+					<ul id="flex-flow-column-wrap" class="items">
+						<li class="item">Orange</li>
+						<li class="item">Apple</li>
+						<li class="item">Banana</li>
+						<li class="item">Cherry</li>
+						<li class="item">Kiwi</li>
+					</ul>
+				</div>
+			</div>
+		</section>	
+
+		<!-- Property justify-content
+		========================================-->
+		<section id="justify-content" class="proprety">
+      <h3 class="sub-title">justify-content</h3>
+<pre>
+  <code><span>display:</span> flex; 
+  <span>flex-direction:</span> row;
+  <span>justify-content:</span> value;</code></pre>
+
+			<div class="row">
+				<aside class="pannel-left">
+					<code class="value"><strong>justify-content: </strong>flex-start <span class="default">default</span></code>
+				</aside>
+				<div class="content-right">
+					<ul id="justify-content-flex-start" class="items">
+						<li class="item">Orange</li>
+						<li class="item">Apple</li>
+						<li class="item">Banana</li>
+						<li class="item">Cherry</li>
+						<li class="item">Kiwi</li>
+					</ul>
+				</div>
+			</div>
+			<div class="row">
+				<aside class="pannel-left">
+					<code class="value"><strong>justify-content: </strong>flex-end</code>
+				</aside>
+				<div class="content-right">
+					<ul id="justify-content-flex-end" class="items">
+						<li class="item">Orange</li>
+						<li class="item">Apple</li>
+						<li class="item">Banana</li>
+						<li class="item">Cherry</li>
+						<li class="item">Kiwi</li>
+					</ul>
+				</div>
+			</div>
+			<div class="row">
+				<aside class="pannel-left">
+					<code class="value"><strong>justify-content: </strong>center</code>
+				</aside>
+				<div class="content-right">
+					<ul id="justify-content-center" class="items">
+						<li class="item">Orange</li>
+						<li class="item">Apple</li>
+						<li class="item">Banana</li>
+						<li class="item">Cherry</li>
+						<li class="item">Kiwi</li>
+					</ul>
+				</div>
+			</div>
+			<div class="row">
+				<aside class="pannel-left">
+					<code class="value"><strong>justify-content: </strong>space-between</code>
+				</aside>
+				<div class="content-right">
+					<ul id="justify-content-space-between" class="items">
+						<li class="item">Orange</li>
+						<li class="item">Apple</li>
+						<li class="item">Banana</li>
+						<li class="item">Cherry</li>
+						<li class="item">Kiwi</li>
+					</ul>
+				</div>
+			</div>
+			<div class="row">
+				<aside class="pannel-left">
+					<code class="value"><strong>justify-content: </strong>space-around</code>
+				</aside>
+				<div class="content-right">
+					<ul id="justify-content-space-around" class="items">
+						<li class="item">Orange</li>
+						<li class="item">Apple</li>
+						<li class="item">Banana</li>
+						<li class="item">Cherry</li>
+						<li class="item">Kiwi</li>
+					</ul>
+				</div>
+			</div>
+			<div class="row">
+				<aside class="pannel-left">
+					<code class="value"><strong>justify-content: </strong>space-evenly</code>
+				</aside>
+				<div class="content-right">
+					<ul id="justify-content-space-evenly" class="items">
+						<li class="item">Orange</li>
+						<li class="item">Apple</li>
+						<li class="item">Banana</li>
+						<li class="item">Cherry</li>
+						<li class="item">Kiwi</li>
+					</ul>
+				</div>
+      </div>
+
+      <!-- align-items in column -->
+<pre>
+  <code><span>display:</span> flex; 
+  <span>flex-direction:</span> column;
+  <span>justify-content:</span> value;</code></pre>
+
+			<div class="justify-content-column">
+        <ul class="justify-content-flex-start">
+          <li class="item">Orange</li>
+          <li class="item">Apple</li>
+          <li class="item">Banana</li>
+          <li class="item">Cherry</li>
+          <li class="item">Kiwi</li>
+        </ul>
+        <ul class="justify-content-flex-end">
+          <li class="item">Orange</li>
+          <li class="item">Apple</li>
+          <li class="item">Banana</li>
+          <li class="item">Cherry</li>
+          <li class="item">Kiwi</li>
+        </ul>
+        <ul class="justify-content-center">
+          <li class="item">Orange</li>
+          <li class="item">Apple</li>
+          <li class="item">Banana</li>
+          <li class="item">Cherry</li>
+          <li class="item">Kiwi</li>
+        </ul>
+        <ul class="justify-content-space-between">
+          <li class="item">Orange</li>
+          <li class="item">Apple</li>
+          <li class="item">Banana</li>
+          <li class="item">Cherry</li>
+          <li class="item">Kiwi</li>
+        </ul>
+        <ul class="justify-content-space-around">
+          <li class="item">Orange</li>
+          <li class="item">Apple</li>
+          <li class="item">Banana</li>
+          <li class="item">Cherry</li>
+          <li class="item">Kiwi</li>
+        </ul>
+        <ul class="justify-content-space-evenly">
+          <li class="item">Orange</li>
+          <li class="item">Apple</li>
+          <li class="item">Banana</li>
+          <li class="item">Cherry</li>
+          <li class="item">Kiwi</li>
+        </ul>
+			</div>
+		</section>
+
+		<!-- Property align-items
+		========================================-->
+		<section id="align-items" class="proprety">
+      <h3 class="sub-title">align-items</h3>
+<pre>
+  <code><span>display:</span> flex; 
+  <span>flex-direction:</span> row;
+  <span>align-items:</span> value;</code></pre>
+
+			<div class="row">
+				<aside class="pannel-left">
+					<code class="value"><strong>align-items: </strong>stretch <span class="default">default</span></code>
+				</aside>
+				<div class="content-right">
+					<ul id="align-items-stretch" class="items">
+						<li class="item">Orange</li>
+						<li class="item">Apple</li>
+						<li class="item">Banana</li>
+						<li class="item">Cherry</li>
+						<li class="item">Kiwi</li>
+					</ul>
+				</div>
+			</div>
+			<div class="row">
+				<aside class="pannel-left">
+					<code class="value"><strong>align-items: </strong>flex-start</code>
+				</aside>
+				<div class="content-right">
+					<ul id="align-items-flex-start" class="items">
+						<li class="item">Orange</li>
+						<li class="item">Apple</li>
+						<li class="item">Banana</li>
+						<li class="item">Cherry</li>
+						<li class="item">Kiwi</li>
+					</ul>
+				</div>
+			</div>
+			<div class="row">
+				<aside class="pannel-left">
+					<code class="value"><strong>align-items: </strong>flex-end</code>
+				</aside>
+				<div class="content-right">
+					<ul id="align-items-flex-end" class="items">
+						<li class="item">Orange</li>
+						<li class="item">Apple</li>
+						<li class="item">Banana</li>
+						<li class="item">Cherry</li>
+						<li class="item">Kiwi</li>
+					</ul>
+				</div>
+			</div>
+			<div class="row">
+				<aside class="pannel-left">
+					<code class="value"><strong>align-items: </strong>center</code>
+				</aside>
+				<div class="content-right">
+					<ul id="align-items-center" class="items">
+						<li class="item">Orange</li>
+						<li class="item">Apple</li>
+						<li class="item">Banana</li>
+						<li class="item">Cherry</li>
+						<li class="item">Kiwi</li>
+					</ul>
+				</div>
+			</div>
+			<div class="row">
+				<aside class="pannel-left">
+					<code class="value"><strong>align-items: </strong>baseline</code>
+				</aside>
+				<div class="content-right">
+					<ul id="align-items-baseline" class="items">
+						<li class="item">Orange</li>
+						<li class="item">Apple</li>
+						<li class="item">Banana</li>
+						<li class="item">Cherry</li>
+						<li class="item">Kiwi</li>
+					</ul>
+				</div>
+      </div>
+      
+      <!-- align-items in column -->
+<pre>
+  <code><span>display:</span> flex; 
+  <span>flex-direction:</span> column;
+  <span>align-items:</span> value;</code></pre>
+
+			<div class="align-items-column">	
+        <ul class="align-items-stretch">
+          <li class="item">Orange</li>
+          <li class="item">Apple</li>
+          <li class="item">Banana</li>
+          <li class="item">Cherry</li>
+          <li class="item">Kiwi</li>
+        </ul>
+        <ul class="align-items-flex-start">
+          <li class="item">Orange</li>
+          <li class="item">Apple</li>
+          <li class="item">Banana</li>
+          <li class="item">Cherry</li>
+          <li class="item">Kiwi</li>
+        </ul>
+        <ul class="align-items-flex-end">
+          <li class="item">Orange</li>
+          <li class="item">Apple</li>
+          <li class="item">Banana</li>
+          <li class="item">Cherry</li>
+          <li class="item">Kiwi</li>
+        </ul>
+        <ul class="align-items-center">
+          <li class="item">Orange</li>
+          <li class="item">Apple</li>
+          <li class="item">Banana</li>
+          <li class="item">Cherry</li>
+          <li class="item">Kiwi</li>
+        </ul>
+			</div>
+    </section>
+    
+		<!-- Property align-content
+		========================================-->
+		<section id="align-content" class="proprety">
+      <h3 class="sub-title">align-content</h3>
+<pre>
+  <code><span>display:</span> flex; 
+  <span>flex-direction:</span> row;
+  <span>align-content:</span> value;</code></pre>
+
+			<div class="row">
+				<aside class="pannel-left">
+					<code class="value"><strong>align-content: </strong>stretch <span class="default">default</span></code>
+				</aside>
+				<div class="content-right">
+					<ul id="align-content-stretch" class="items">
+						<li class="item">Orange</li>
+						<li class="item">Apple</li>
+						<li class="item">Banana</li>
+						<li class="item">Cherry</li>
+						<li class="item">Kiwi</li>
+					</ul>
+				</div>
+			</div>
+			<div class="row">
+				<aside class="pannel-left">
+					<code class="value"><strong>align-content: </strong>flex-start</code>
+				</aside>
+				<div class="content-right">
+					<ul id="align-content-flex-start" class="items">
+						<li class="item">Orange</li>
+						<li class="item">Apple</li>
+						<li class="item">Banana</li>
+						<li class="item">Cherry</li>
+						<li class="item">Kiwi</li>
+					</ul>
+				</div>
+			</div>
+			<div class="row">
+				<aside class="pannel-left">
+					<code class="value"><strong>align-content: </strong>flex-end</code>
+				</aside>
+				<div class="content-right">
+					<ul id="align-content-flex-end" class="items">
+						<li class="item">Orange</li>
+						<li class="item">Apple</li>
+						<li class="item">Banana</li>
+						<li class="item">Cherry</li>
+						<li class="item">Kiwi</li>
+					</ul>
+				</div>
+			</div>
+			<div class="row">
+				<aside class="pannel-left">
+					<code class="value"><strong>align-content: </strong>center</code>
+				</aside>
+				<div class="content-right">
+					<ul id="align-content-center" class="items">
+						<li class="item">Orange</li>
+						<li class="item">Apple</li>
+						<li class="item">Banana</li>
+						<li class="item">Cherry</li>
+						<li class="item">Kiwi</li>
+					</ul>
+				</div>
+			</div>
+			<div class="row">
+				<aside class="pannel-left">
+					<code class="value"><strong>align-content: </strong>space-between</code>
+				</aside>
+				<div class="content-right">
+					<ul id="align-content-space-between" class="items">
+						<li class="item">Orange</li>
+						<li class="item">Apple</li>
+						<li class="item">Banana</li>
+						<li class="item">Cherry</li>
+						<li class="item">Kiwi</li>
+					</ul>
+				</div>
+			</div>
+			<div class="row">
+				<aside class="pannel-left">
+					<code class="value"><strong>align-content: </strong>space-around</code>
+				</aside>
+				<div class="content-right">
+					<ul id="align-content-space-around" class="items">
+						<li class="item">Orange</li>
+						<li class="item">Apple</li>
+						<li class="item">Banana</li>
+						<li class="item">Cherry</li>
+						<li class="item">Kiwi</li>
+					</ul>
+				</div>
+			</div>
+    </section>
+
+    
+    <!--====================================
+      Properties for the children 
+    ========================================-->
+    
+		<!-- Property order
+		========================================-->
+		<h2>Properties for the children <em>(flex items)</em></h2>
+		<section id="order" class="proprety">
+      <h3 class="sub-title">order</h3>
+<pre>
+<code><div>.parent {
+  <span>display:</span> flex;
+  <span>flex-direction:</span> column;
+}</div>
+<div>.children {
+  <span>order:</span> value;
+}</div></code></pre>
+  
+      <div class="row">
+        <aside class="pannel-left">
+          <code class="value"><strong>order: </strong>0 <span class="default">default</span></code>
+        </aside>
+        <div class="content-right">
+          <ul id="order-0" class="items">
+            <li class="item orange">Orange (order: 0)</li>
+            <li class="item">Apple</li>
+            <li class="item">Banana</li>
+            <li class="item">Cherry</li>
+            <li class="item">Kiwi</li>
+          </ul>
+        </div>
+      </div>
+      <div class="row">
+        <aside class="pannel-left">
+          <code class="value"><strong>order: </strong>1</code>
+        </aside>
+        <div class="content-right">
+          <ul id="order-1" class="items">
+            <li class="item orange">Orange (order: 1)</li>
+            <li class="item">Apple</li>
+            <li class="item">Banana</li>
+            <li class="item">Cherry</li>
+            <li class="item kiwi">Kiwi (order: -1)</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+    
+		<!-- Property align-self
+		========================================-->
+		<section id="align-self" class="proprety">
+      <h3 class="sub-title">align-self</h3>
+<pre>
+<code><div>.parent {
+  <span>display:</span> flex;
+  <span>flex-direction:</span> row;
+}</div>
+<div>.children {
+  <span>align-self:</span> value;
+}</div></code></pre>
+  
+      <div class="row">
+        <aside class="pannel-left">
+          <code class="value"><strong>align-self: </strong>auto <span class="default">default</span></code>
+        </aside>
+        <div class="content-right">
+          <ul id="align-self-auto" class="items">
+            <li class="item">Orange</li>
+            <li class="item apple">Apple</li>
+            <li class="item">Banana</li>
+            <li class="item">Cherry</li>
+            <li class="item">Kiwi</li>
+          </ul>
+        </div>
+      </div>
+      <div class="row">
+        <aside class="pannel-left">
+          <code class="value"><strong>align-self: </strong>flex-start</code>
+        </aside>
+        <div class="content-right">
+          <ul id="align-self-flex-start" class="items">
+            <li class="item">Orange</li>
+            <li class="item apple">Apple</li>
+            <li class="item">Banana</li>
+            <li class="item">Cherry</li>
+            <li class="item">Kiwi</li>
+          </ul>
+        </div>
+      </div>
+      </div>
+      <div class="row">
+        <aside class="pannel-left">
+          <code class="value"><strong>align-self: </strong>flex-end</code>
+        </aside>
+        <div class="content-right">
+          <ul id="align-self-flex-end" class="items">
+            <li class="item">Orange</li>
+            <li class="item apple">Apple</li>
+            <li class="item">Banana</li>
+            <li class="item">Cherry</li>
+            <li class="item">Kiwi</li>
+          </ul>
+        </div>
+      </div>
+      <div class="row">
+        <aside class="pannel-left">
+          <code class="value"><strong>align-self: </strong>center</code>
+        </aside>
+        <div class="content-right">
+          <ul id="align-self-center" class="items">
+            <li class="item">Orange</li>
+            <li class="item apple">Apple</li>
+            <li class="item">Banana</li>
+            <li class="item">Cherry</li>
+            <li class="item">Kiwi</li>
+          </ul>
+        </div>
+      </div>
+      <div class="row">
+        <aside class="pannel-left">
+          <code class="value"><strong>align-self: </strong>baseline</code>
+        </aside>
+        <div class="content-right">
+          <ul id="align-self-baseline" class="items">
+            <li class="item">Orange</li>
+            <li class="item apple">Apple</li>
+            <li class="item">Banana</li>
+            <li class="item">Cherry</li>
+            <li class="item">Kiwi</li>
+          </ul>
+        </div>
+      </div>
+      <div class="row">
+        <aside class="pannel-left">
+          <code class="value"><strong>align-self: </strong>stretch</code>
+        </aside>
+        <div class="content-right">
+          <ul id="align-self-stretch" class="items">
+            <li class="item">Orange</li>
+            <li class="item apple">Apple</li>
+            <li class="item">Banana</li>
+            <li class="item">Cherry</li>
+            <li class="item">Kiwi</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+    
+		<!-- Property flex-grow
+		========================================-->
+		<section id="flex-grow" class="proprety">
+        <h3 class="sub-title">flex-grow</h3>    
+      <div class="row">
+        <aside class="pannel-left">
+          <code class="value"><strong>flex-grow: </strong>0 <span class="default">default</span></code>
+        </aside>
+        <div class="content-right">
+          <ul id="flex-grow-0" class="items">
+            <li class="item orange">Orange 0 (cannot grow)</li>
+            <li class="item apple">Apple 1</li>
+            <li class="item banana">Banana 2</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+    
+		<!-- Property flex-shrink
+		========================================-->
+		<section id="flex-shrink" class="proprety">
+        <h3 class="sub-title">flex-shrink</h3>    
+      <div class="row">
+        <aside class="pannel-left">
+          <code class="value"><strong>flex-shrink: </strong>1 <span class="default">default</span></code>
+        </aside>
+        <div class="content-right">
+          <ul id="flex-shrink-1" class="items">
+            <li class="item orange">Orange 1</li>
+            <li class="item apple">Apple 2</li>
+            <li class="item banana">Banana 0 (cannot shrink)</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+    
+		<!-- Property flex-basis
+		========================================-->
+		<section id="flex-basis" class="proprety">
+        <h3 class="sub-title">flex-basis</h3>
+<pre>
+<code><div>.parent {
+  <span>display:</span> flex;
+  <span>flex-direction:</span> row;
+}</div>
+<div>.orange {
+  <span>flex-grow:</span> 0;
+  <span>flex-shrink:</span> 0;
+  <span>flex-basis:</span> 50%;
+}</div>
+<div>.apple {
+  <span>flex-grow:</span> 1;
+  <span>flex-shrink:</span> 0;
+  <span>flex-basis:</span> 50%;
+}</div>
+<div>.banana {
+  <span>flex-grow:</span> 1;
+  <span>flex-shrink:</span> 1;
+  <span>flex-basis:</span> 50%;
+}</div></code></pre>
+
+      <div class="row">
+        <aside class="pannel-left">
+          <code class="value"><strong>flex-basis: </strong>auto <span class="default">default</span></code>
+        </aside>
+        <div class="content-right">
+          <ul id="flex-basis-auto" class="items">
+            <li class="item orange">Orange</li>
+            <li class="item apple">Apple</li>
+            <li class="item banana">Banana</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+    
+		<!-- Property flex
+		========================================-->
+		<section id="flex" class="proprety">
+        <h3 class="sub-title">flex shortcut of flex-grow + flex-shrink + flex-basis</h3>
+<pre>
+<code><div>.parent {
+  <span>display:</span> flex;
+  <span>flex-direction:</span> row;
+}</div>
+<div>.orange {
+  <span>flex:</span> 1 1 auto;
+}</div>
+<div>.apple {
+  <span>flex:</span> 0 1 auto;
+}</div></code></pre>
+        
+      <div class="row">
+        <aside class="pannel-left">
+          <code class="value"><strong>flex: </strong>0 1 auto <span class="default">default</span></code>
+        </aside>
+        <div class="content-right">
+          <ul id="flex-default" class="items">
+            <li class="item orange">Orange</li>
+            <li class="item apple">Apple</li>
+            <li class="item banana">Banana</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+  </main>
+  <script>
+    function openNav() {
+      document.getElementById("sideNav").style.width = "200px";
+    }
+
+    function closeNav() {
+      document.getElementById("sideNav").style.width = "0";
+    }
+  </script>
+</body>
+</html>
